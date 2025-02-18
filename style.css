@@ -1,0 +1,44 @@
+section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.container {
+    display: flex;
+    gap: 15px;
+}
+
+.color {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+    opacity: .75;
+}
+
+.color:hover {
+    transform: scale(1.1);
+}
+
+.show {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.active {
+    opacity: 1;
+}
