@@ -6,17 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mood Tracker</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
 </head>
 
 <body>
     <section>
+        <h2>How do You Feel</h2>
         <div class="container">
-            <div data-color="red" class="color" style="background-color: red;"></div>
-            <div data-color="blue" class="color" style="background-color: blue;"></div>
-            <div data-color="yellow" class="color" style="background-color: yellow;"></div>
-            <div data-color="green" class="color" style="background-color: green;"></div>
+            <div data-color="darkgoldenrod" data-emotion="happy" class="color"
+                style="box-shadow: 2px 2px 5px 2px rgba(255, 174, 0, 0.733)">😊
+            </div>
+            <div data-color="blue" data-emotion="sad" class="color"
+                style="box-shadow: 2px 2px 5px 2px rgba(0, 47, 255, 0.733)">😢</div>
+            <div data-color="purple" data-emotion="afraid" class="color"
+                style="box-shadow: 2px 2px 5px 2px rgba(204, 0, 255, 0.733)">😨</div>
+            <div data-color="red" data-emotion="angry" class="color"
+                style="box-shadow: 2px 2px 5px 2px rgba(255, 0, 0, 0.733)"> 😡</div>
         </div>
         <div class="show"></div>
+        <div class="features">
+            <span id="copy"><i class="fas fa-copy"></i></span>
+            <span id="voice"><i class="fas fa-volume-up"></i></span>
+        </div>
     </section>
 </body>
 <script src="./main.js"></script>
