@@ -57,12 +57,27 @@ async function getQuotes(file){
 // Function to copy Quote
 function copyQuote() {
     const quote = document.querySelector('.show').textContent;
-    navigator.clipboard.writeText(quote).then(()=>{
-        alert('the Quote is coppied ssuccessfully')
-    }
-
-    )
+    navigator.clipboard.writeText(quote).then(() => {
+        Swal.fire({
+            title: 'Copied!',
+            text: 'The quote has been copied to clipboard successfully.',
+            icon: 'success',
+            confirmButtonText: 'OK',
+            timer: 2000,
+            showConfirmButton: false,
+            toast: true,
+            position: 'top-end'
+        });
+    }).catch(() => {
+        Swal.fire({
+            title: 'Oops!',
+            text: 'Failed to copy the quote.',
+            icon: 'error',
+            confirmButtonText: 'Try Again'
+        });
+    });
 }
+
 
 
 // Function to speak the quote
